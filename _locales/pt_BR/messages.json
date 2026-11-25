@@ -1,0 +1,116 @@
+{
+  "extName": {
+    "message": "ChatHappens – Apague chats do ChatGPT em massa"
+  },
+  "extDesc": {
+    "message": "Selecione e apague (ou arquive) vários chats do ChatGPT de uma vez."
+  },
+  "popupMsg": {
+    "message": "Abre o painel para selecionar e apagar vários chats de uma vez."
+  },
+  "popupOpen": {
+    "message": "Abrir painel"
+  },
+  "popupReload": {
+    "message": "Recarregue a página do ChatGPT (F5) e tente de novo."
+  },
+  "errSession": {
+    "message": "Não foi possível obter a sessão. Você está logado?"
+  },
+  "errNoToken": {
+    "message": "Sessão sem token. Faça login no ChatGPT."
+  },
+  "rateLimit": {
+    "message": "Limite de requisições atingido, aguardando {1}s…"
+  },
+  "errHttp": {
+    "message": "Erro {1} em {2}"
+  },
+  "fabTitle": {
+    "message": "Apagar chats em massa"
+  },
+  "close": {
+    "message": "Fechar"
+  },
+  "all": {
+    "message": "Todos"
+  },
+  "filter": {
+    "message": "Filtrar por título…"
+  },
+  "srcActive": {
+    "message": "Chats ativos"
+  },
+  "srcArchived": {
+    "message": "Arquivados"
+  },
+  "reloadList": {
+    "message": "Atualizar lista"
+  },
+  "loading": {
+    "message": "Carregando…"
+  },
+  "loadingN": {
+    "message": "Carregando… {1}"
+  },
+  "loadingNofT": {
+    "message": "Carregando… {1} de {2}"
+  },
+  "archive": {
+    "message": "Arquivar"
+  },
+  "unarchive": {
+    "message": "Desarquivar"
+  },
+  "delete": {
+    "message": "Apagar"
+  },
+  "deleteN": {
+    "message": "Apagar ({1})"
+  },
+  "noChats": {
+    "message": "Nenhum chat encontrado."
+  },
+  "untitled": {
+    "message": "(sem título)"
+  },
+  "statusCount": {
+    "message": "{1} chats • {2} selecionado(s)"
+  },
+  "shiftHint": {
+    "message": " — Shift+clique seleciona um intervalo"
+  },
+  "error": {
+    "message": "Erro: {1}"
+  },
+  "progressOf": {
+    "message": "{1} {2} de {3}…"
+  },
+  "done": {
+    "message": "{1} ok."
+  },
+  "doneFail": {
+    "message": "{1} ok, {2} com erro."
+  },
+  "confirmDelete": {
+    "message": "Apagar {1} chat(s) permanentemente? Essa ação não pode ser desfeita."
+  },
+  "deleting": {
+    "message": "Apagando"
+  },
+  "archiving": {
+    "message": "Arquivando"
+  },
+  "unarchiving": {
+    "message": "Desarquivando"
+  },
+  "popupNotChatGPT": {
+    "message": "O painel só funciona no ChatGPT. Abra o chatgpt.com e clique aqui de novo."
+  },
+  "popupGoChatGPT": {
+    "message": "Ir para o ChatGPT"
+  },
+  "finish": {
+    "message": "Concluído"
+  }
+}

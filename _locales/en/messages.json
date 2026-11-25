@@ -1,0 +1,116 @@
+{
+  "extName": {
+    "message": "ChatHappens – Bulk delete ChatGPT chats"
+  },
+  "extDesc": {
+    "message": "Select and delete (or archive) multiple ChatGPT chats at once."
+  },
+  "popupMsg": {
+    "message": "Open the panel to select and delete multiple chats at once."
+  },
+  "popupOpen": {
+    "message": "Open panel"
+  },
+  "popupReload": {
+    "message": "Reload the ChatGPT page (F5) and try again."
+  },
+  "errSession": {
+    "message": "Could not get the session. Are you logged in?"
+  },
+  "errNoToken": {
+    "message": "Session has no token. Please log in to ChatGPT."
+  },
+  "rateLimit": {
+    "message": "Rate limit reached, waiting {1}s…"
+  },
+  "errHttp": {
+    "message": "Error {1} on {2}"
+  },
+  "fabTitle": {
+    "message": "Bulk delete chats"
+  },
+  "close": {
+    "message": "Close"
+  },
+  "all": {
+    "message": "All"
+  },
+  "filter": {
+    "message": "Filter by title…"
+  },
+  "srcActive": {
+    "message": "Active chats"
+  },
+  "srcArchived": {
+    "message": "Archived"
+  },
+  "reloadList": {
+    "message": "Refresh list"
+  },
+  "loading": {
+    "message": "Loading…"
+  },
+  "loadingN": {
+    "message": "Loading… {1}"
+  },
+  "loadingNofT": {
+    "message": "Loading… {1} of {2}"
+  },
+  "archive": {
+    "message": "Archive"
+  },
+  "unarchive": {
+    "message": "Unarchive"
+  },
+  "delete": {
+    "message": "Delete"
+  },
+  "deleteN": {
+    "message": "Delete ({1})"
+  },
+  "noChats": {
+    "message": "No chats found."
+  },
+  "untitled": {
+    "message": "(untitled)"
+  },
+  "statusCount": {
+    "message": "{1} chats • {2} selected"
+  },
+  "shiftHint": {
+    "message": " — Shift+click selects a range"
+  },
+  "error": {
+    "message": "Error: {1}"
+  },
+  "progressOf": {
+    "message": "{1} {2} of {3}…"
+  },
+  "done": {
+    "message": "{1} ok."
+  },
+  "doneFail": {
+    "message": "{1} ok, {2} failed."
+  },
+  "confirmDelete": {
+    "message": "Permanently delete {1} chat(s)? This cannot be undone."
+  },
+  "deleting": {
+    "message": "Deleting"
+  },
+  "archiving": {
+    "message": "Archiving"
+  },
+  "unarchiving": {
+    "message": "Unarchiving"
+  },
+  "popupNotChatGPT": {
+    "message": "The panel only works on ChatGPT. Open chatgpt.com and click here again."
+  },
+  "popupGoChatGPT": {
+    "message": "Go to ChatGPT"
+  },
+  "finish": {
+    "message": "Done"
+  }
+}

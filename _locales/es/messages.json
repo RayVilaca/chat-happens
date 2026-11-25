@@ -1,0 +1,116 @@
+{
+  "extName": {
+    "message": "ChatHappens – Borra chats de ChatGPT en masa"
+  },
+  "extDesc": {
+    "message": "Selecciona y borra (o archiva) varios chats de ChatGPT a la vez."
+  },
+  "popupMsg": {
+    "message": "Abre el panel para seleccionar y borrar varios chats a la vez."
+  },
+  "popupOpen": {
+    "message": "Abrir panel"
+  },
+  "popupReload": {
+    "message": "Recarga la página de ChatGPT (F5) e inténtalo de nuevo."
+  },
+  "errSession": {
+    "message": "No se pudo obtener la sesión. ¿Has iniciado sesión?"
+  },
+  "errNoToken": {
+    "message": "Sesión sin token. Inicia sesión en ChatGPT."
+  },
+  "rateLimit": {
+    "message": "Límite de solicitudes alcanzado, esperando {1}s…"
+  },
+  "errHttp": {
+    "message": "Error {1} en {2}"
+  },
+  "fabTitle": {
+    "message": "Borrar chats en masa"
+  },
+  "close": {
+    "message": "Cerrar"
+  },
+  "all": {
+    "message": "Todos"
+  },
+  "filter": {
+    "message": "Filtrar por título…"
+  },
+  "srcActive": {
+    "message": "Chats activos"
+  },
+  "srcArchived": {
+    "message": "Archivados"
+  },
+  "reloadList": {
+    "message": "Actualizar lista"
+  },
+  "loading": {
+    "message": "Cargando…"
+  },
+  "loadingN": {
+    "message": "Cargando… {1}"
+  },
+  "loadingNofT": {
+    "message": "Cargando… {1} de {2}"
+  },
+  "archive": {
+    "message": "Archivar"
+  },
+  "unarchive": {
+    "message": "Desarchivar"
+  },
+  "delete": {
+    "message": "Borrar"
+  },
+  "deleteN": {
+    "message": "Borrar ({1})"
+  },
+  "noChats": {
+    "message": "No se encontraron chats."
+  },
+  "untitled": {
+    "message": "(sin título)"
+  },
+  "statusCount": {
+    "message": "{1} chats • {2} seleccionado(s)"
+  },
+  "shiftHint": {
+    "message": " — Mayús+clic selecciona un rango"
+  },
+  "error": {
+    "message": "Error: {1}"
+  },
+  "progressOf": {
+    "message": "{1} {2} de {3}…"
+  },
+  "done": {
+    "message": "{1} ok."
+  },
+  "doneFail": {
+    "message": "{1} ok, {2} con error."
+  },
+  "confirmDelete": {
+    "message": "¿Borrar {1} chat(s) permanentemente? Esta acción no se puede deshacer."
+  },
+  "deleting": {
+    "message": "Borrando"
+  },
+  "archiving": {
+    "message": "Archivando"
+  },
+  "unarchiving": {
+    "message": "Desarchivando"
+  },
+  "popupNotChatGPT": {
+    "message": "El panel solo funciona en ChatGPT. Abre chatgpt.com y vuelve a hacer clic aquí."
+  },
+  "popupGoChatGPT": {
+    "message": "Ir a ChatGPT"
+  },
+  "finish": {
+    "message": "Listo"
+  }
+}
