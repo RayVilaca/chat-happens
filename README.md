@@ -20,7 +20,7 @@ Extensão para Chrome que permite **selecionar e apagar (ou arquivar) vários ch
 - ⇧ **Shift + clique** para selecionar um intervalo
 - ☑️ Selecionar todos os chats visíveis
 - 🌎 Interface em **português, inglês e espanhol** (segue o idioma do navegador)
-- 🔒 Roda 100% no seu navegador, usando a sua própria sessão do ChatGPT. Nenhum dado é enviado a terceiros.
+- 🔒 Roda 100% no seu navegador, usando a sua própria sessão do ChatGPT. Nenhum dado é enviado a terceiros. ([Política de privacidade](PRIVACY.md))
 
 ## Instalação (modo desenvolvedor)
 

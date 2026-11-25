@@ -18,7 +18,7 @@
 
   async function getToken() {
     if (tokenCache) return tokenCache;
-    const res = await fetch("/api/auth/session", { credentials: "include" });
+    const res = await pageFetch("/api/auth/session", { credentials: "include" });
     if (!res.ok) throw new Error(t("errSession"));
     const data = await res.json();
     if (!data.accessToken) throw new Error(t("errNoToken"));
@@ -26,11 +26,15 @@
     return tokenCache;
   }
 
+  // No Firefox, o fetch do content script sai com a origem da extensão; content.fetch faz a
+  // requisição como a própria página (com os cookies e a origem do chatgpt.com).
+  const pageFetch = typeof content !== "undefined" && content?.fetch ? content.fetch.bind(content) : fetch;
+
   const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
   async function api(path, { method = "GET", body } = {}, attempt = 0) {
     const token = await getToken();
-    const res = await fetch(`/backend-api${path}`, {
+    const res = await pageFetch(`/backend-api${path}`, {
       method,
       credentials: "include",
       headers: {
