@@ -8,7 +8,6 @@
   // Os textos ficam em _locales/<idioma>/messages.json; {1}, {2}… são substituídos pelos args.
   const t = (key, ...args) =>
     args.reduce((s, v, i) => s.split(`{${i + 1}}`).join(String(v)), chrome.i18n.getMessage(key) || key);
-  const esc = (s) => s.replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]);
 
   const PAGE_SIZE = 100;
   const DELAY_MS = 350; // pausa entre requisições para evitar rate limit (429)
@@ -151,33 +150,38 @@
       .empty { padding: 40px; text-align: center; color: var(--muted); }
       label.all { display: flex; gap: 6px; align-items: center; cursor: pointer; font-size: 13px; }
     </style>
-    <button class="fab" title="${esc(t("fabTitle"))}">🗑</button>
+    <button class="fab" data-i18n-title="fabTitle">🗑</button>
     <div class="overlay">
       <div class="panel">
         <header>
           <div class="brand"><h2>Chat<span>Happens</span></h2><p>Chat happens. Move on.</p></div>
-          <button class="x" title="${esc(t("close"))}">✕</button>
+          <button class="x" data-i18n-title="close">✕</button>
         </header>
         <div class="toolbar">
-          <label class="all"><input type="checkbox" class="selall"> ${esc(t("all"))}</label>
-          <input type="search" class="q" placeholder="${esc(t("filter"))}">
+          <label class="all"><input type="checkbox" class="selall"> <span data-i18n="all"></span></label>
+          <input type="search" class="q" data-i18n-placeholder="filter">
           <select class="src">
-            <option value="active">${esc(t("srcActive"))}</option>
-            <option value="archived">${esc(t("srcArchived"))}</option>
+            <option value="active" data-i18n="srcActive"></option>
+            <option value="archived" data-i18n="srcArchived"></option>
           </select>
-          <button class="b neutral reload" title="${esc(t("reloadList"))}">↻</button>
+          <button class="b neutral reload" data-i18n-title="reloadList">↻</button>
         </div>
         <div class="progress"><div></div></div>
-        <div class="list"><div class="empty">${esc(t("loading"))}</div></div>
+        <div class="list"></div>
         <footer>
           <span class="status"></span>
-          <button class="b neutral archive" disabled>${esc(t("archive"))}</button>
-          <button class="b danger delete" disabled>${esc(t("delete"))}</button>
-          <button class="b neutral finish" hidden>${esc(t("finish"))}</button>
+          <button class="b neutral archive" disabled data-i18n="archive"></button>
+          <button class="b danger delete" disabled data-i18n="delete"></button>
+          <button class="b neutral finish" hidden data-i18n="finish"></button>
         </footer>
       </div>
     </div>
   `;
+
+  // O HTML acima é fixo (sem valores dinâmicos); os textos traduzidos entram via textContent/atributos.
+  root.querySelectorAll("[data-i18n]").forEach((el) => { el.textContent = t(el.dataset.i18n); });
+  root.querySelectorAll("[data-i18n-title]").forEach((el) => { el.title = t(el.dataset.i18nTitle); });
+  root.querySelectorAll("[data-i18n-placeholder]").forEach((el) => { el.placeholder = t(el.dataset.i18nPlaceholder); });
 
   const $ = (s) => root.querySelector(s);
   const overlay = $(".overlay");
@@ -214,7 +218,10 @@
   function render() {
     const items = visible();
     if (!items.length) {
-      listEl.innerHTML = `<div class="empty">${esc(loaded ? t("noChats") : t("loading"))}</div>`;
+      const empty = document.createElement("div");
+      empty.className = "empty";
+      empty.textContent = loaded ? t("noChats") : t("loading");
+      listEl.replaceChildren(empty);
     } else {
       const frag = document.createDocumentFragment();
       items.forEach((c, i) => {
